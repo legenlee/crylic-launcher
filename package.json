@@ -1,0 +1,51 @@
+{
+  "name": "crylic-launcher",
+  "author": "LegenLee",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/legenlee/crylic-launcher"
+  },
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "dist/main/index.cjs",
+  "scripts": {
+    "dev": "node scripts/watch.js",
+    "dev:renderer": "vite packages/renderer",
+    "prebuild": "node scripts/build.js",
+    "build": "electron-builder",
+    "lint": "eslint packages/**/*.{js,ts,d.ts,svelte}",
+    "fix": "prettier --write packages/**/*.{js,ts,d.ts,svelte}"
+  },
+  "env": {
+    "VITE_DEV_SERVER_HOST": "127.0.0.1",
+    "VITE_DEV_SERVER_PORT": "3000"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "^1.0.1",
+    "@tsconfig/svelte": "^3.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.30.7",
+    "@typescript-eslint/parser": "^5.30.7",
+    "autoprefixer": "^10.4.7",
+    "child_process": "^1.0.2",
+    "electron": "^19.0.8",
+    "electron-builder": "^23.1.0",
+    "eslint": "^8.20.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-svelte": "^2.2.0",
+    "postcss": "^8.4.14",
+    "prettier": "^2.7.1",
+    "prettier-plugin-svelte": "^2.7.0",
+    "svelte": "^3.49.0",
+    "svelte-check": "^2.8.0",
+    "svelte-eslint-parser": "^0.16.4",
+    "svelte-preprocess": "^4.10.7",
+    "tailwindcss": "^3.1.6",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.0",
+    "vite-plugin-eslint": "^1.7.0"
+  }
+}

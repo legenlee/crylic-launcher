@@ -1,0 +1,30 @@
+{
+  "appId": "io.legenlee.cryliclauncher",
+  "productName": "Crylic Launcher",
+  "copyright": "Copyright (c) 2022 ${author}",
+  "asar": true,
+  "directories": {
+    "output": "releases/${version}"
+  },
+  "files": ["dist"],
+  "mac": {
+    "artifactName": "${productName}.${ext}",
+    "target": ["dmg", "zip"]
+  },
+  "win": {
+    "artifactName": "${productName}.${ext}",
+    "target": [
+      {
+        "target": ["zip", "nsis"],
+        "arch": ["x64"]
+      },
+      "zip"
+    ]
+  },
+  "nsis": {
+    "oneClick": false,
+    "perMachine": false,
+    "allowToChangeInstallationDirectory": true,
+    "deleteAppDataOnUninstall": false
+  }
+}
